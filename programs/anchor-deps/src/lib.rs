@@ -1,4 +1,6 @@
 use anchor_lang::prelude::*;
+use anchor_spl::token::Mint;
+
 
 declare_id!("74tCK19kyBqwVtiYSmXfZA7mfgbVF8YhNfauvnGNenFG");
 
@@ -13,4 +15,10 @@ pub mod anchor_deps {
 }
 
 #[derive(Accounts)]
-pub struct Initialize {}
+pub struct MintNFT<'info>{
+#[account(mut)]
+pub mint : Account<'info,Mint>
+
+#[account(mut)]
+
+}
